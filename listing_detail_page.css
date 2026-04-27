@@ -1,0 +1,593 @@
+/* listing_detail_page.css */
+
+.detail-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    padding: 30px 20px 50px;
+    min-height: 100vh;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Back Navigation */
+.back-nav {
+    margin-bottom: 25px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background: #f9fafb;
+    border-color: var(--brand-color);
+    color: var(--text-on-brand);
+}
+
+/* Main Grid Layout */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Images Column */
+.images-column {
+    padding: 30px;
+    background: #f8fafc;
+    min-height: 600px;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.thumbnail {
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    text-align: center;
+    padding: 100px 20px;
+    color: #9ca3af;
+}
+
+.no-image-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.no-image p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Details Column */
+.details-column {
+    padding: 30px 30px 30px 0;
+    min-height: 600px;
+}
+
+/* Listing Header */
+.listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.listing-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.city-badge {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.address {
+    color: #6b7280;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.price-box {
+    text-align: right;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--brand-color);
+    display: block;
+    line-height: 1;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.period {
+    color: #9ca3af;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Description Box */
+.description-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.description-box h3 {
+    color: #374151;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.description-box p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Details Box */
+.details-box {
+    margin-bottom: 30px;
+}
+
+.details-box h3 {
+    color: #374151;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.detail-grid-small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-label {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.detail-value {
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Google Maps Location Section */
+.location-map-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.location-map-section h3 {
+    color: #374151;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.map-container {
+    width: 100%;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #a8c6ff 0%, #c2e9fb 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+    border: 2px dashed #93c5fd;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.map-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.map-address {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.4;
+}
+
+.map-note {
+    color: #6b7280;
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.map-note p {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.directions-btn {
+    text-align: center;
+}
+
+.directions-btn-link {
+    display: inline-block;
+    background: #4285f4;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.directions-btn-link:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+/* Contact Box */
+.contact-box {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f0f9ff;
+    border-radius: 12px;
+    border: 1px solid #e0f2fe;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-header h3 {
+    color: #0369a1;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.verified-badge {
+    background: #dcfce7;
+    color: #166534;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Owner Details */
+.owner-details {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.owner-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.owner-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--brand-color), var(--brand-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.owner-avatar.placeholder {
+    background: linear-gradient(135deg, var(--brand-color), var(--brand-accent));
+}
+
+.owner-info h4 {
+    color: #1f2937;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #374151;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contact-link:hover {
+    background: #f3f4f6;
+    transform: translateX(5px);
+}
+
+.contact-link.email:hover {
+    color: #dc2626;
+}
+
+.contact-link.phone:hover {
+    color: #059669;
+}
+
+/* Login Required */
+.login-required {
+    text-align: center;
+    padding: 30px;
+}
+
+.blurred-contact {
+    margin-bottom: 30px;
+}
+
+.blurred-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.blurred-text {
+    background: linear-gradient(90deg, #d1d5db, #9ca3af, #d1d5db);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+    height: 30px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: 250px;
+}
+
+@keyframes shimmer {
+    0% { background-position: -250px 0; }
+    100% { background-position: 250px 0; }
+}
+
+.label {
+    color: #6b7280;
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.login-prompt {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px dashed var(--brand-color);
+}
+
+.login-prompt p {
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.login-btn {
+    display: inline-block;
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.login-btn:hover {
+    background: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    padding-top: 30px;
+    border-top: 2px solid #f3f4f6;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.primary-btn {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+}
+
+.primary-btn:hover {
+    background: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.4);
+}
+
+.report-btn {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 2px solid #fecaca;
+}
+
+.report-btn:hover {
+    background: #fee2e2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+}
+
+/* Success Message */
+.success-message {
+    margin-top: 30px;
+    padding: 20px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 8px;
+    border: 1px solid #bbf7d0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    animation: slideIn 0.5s ease;
+    font-family: "Times New Roman", Times, serif;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

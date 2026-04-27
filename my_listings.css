@@ -1,0 +1,82 @@
+/* Styles for my_listings.php (simple, neutral) */
+
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+.my-listings-section {
+    background: #f4f6fa;
+    min-height: 70vh;
+    padding: 2rem 1rem 3rem;
+}
+
+.wrap {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.1rem;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.04);
+    border: 1px solid #e9eef6;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.head h1 { margin: 0; color: #23272a; }
+
+.btn.add {
+    padding: 0.5rem 0.9rem;
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.17s;
+}
+
+.btn.add:hover {
+    background: var(--brand-accent);
+}
+
+.table-wrap { overflow-x: auto; }
+
+.listings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.listings-table thead th {
+    text-align: left;
+    padding: 0.85rem 0.6rem;
+    color: #556066;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.listings-table tbody td {
+    padding: 0.72rem 0.6rem;
+    border-bottom: 1px solid #f3f6f9;
+    color: #2a2e32;
+}
+
+.listings-table .empty-row td {
+    text-align: center;
+    color: #6a7377;
+    padding: 2rem;
+}
+
+@media (max-width: 800px) {
+    .head { flex-direction: column; align-items: stretch; gap: 0.6rem; }
+    .btn.add { align-self: flex-end; }
+}

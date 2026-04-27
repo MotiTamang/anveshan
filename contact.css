@@ -1,0 +1,144 @@
+/* contact.css - styles for contact.php (owner contact information) */
+
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+.contact-section {
+    background: #f4f6fa;
+    min-height: 80vh;
+    padding: 2rem 1rem 3rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.contact-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e9eef6;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+}
+
+.contact-wrap h2 {
+    margin-top: 0;
+    color: #23272a;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.listing-info {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--brand-color);
+}
+
+.listing-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #23272a;
+}
+
+.listing-info p {
+    margin: 0.5rem 0;
+    color: #556066;
+    font-size: 0.95rem;
+}
+
+.listing-info strong {
+    color: #23272a;
+}
+
+.owner-info {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.owner-info h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #23272a;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-details p {
+    margin: 0;
+    color: #556066;
+    font-size: 1rem;
+}
+
+.contact-details strong {
+    color: #23272a;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.contact-details a {
+    color: var(--brand-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: var(--brand-accent);
+}
+
+.contact-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef3f8;
+    text-align: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background 0.17s;
+}
+
+.btn:hover {
+    background: var(--brand-accent);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-wrap {
+        padding: 1.5rem;
+    }
+
+    .contact-wrap h2 {
+        font-size: 1.75rem;
+    }
+}

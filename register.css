@@ -1,0 +1,133 @@
+/* register.css - updated to style phone and role select and flash messages */
+
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+.register-section {
+    background: #f4f6fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.register-container {
+    background: #fff;
+    padding: 2.4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.06);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #eaf1fb;
+}
+
+.register-container h2 {
+    color: #23272a;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    text-align: left;
+}
+
+.register-form label {
+    font-weight: 600;
+    color: #445257;
+    margin-bottom: 0.15rem;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form select {
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #d7e6f7;
+    background: #fbfdff;
+    font-size: 1rem;
+    color: #23272a;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.register-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #556066 50%),
+                      linear-gradient(135deg, #556066 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1rem + 2px), calc(100% - 13px) calc(1rem + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.25rem;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.06);
+}
+
+.register-form button {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.17s;
+}
+
+.register-form button:hover {
+    background: var(--brand-accent);
+}
+
+/* Flash / message box */
+.flash {
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.flash.success {
+    background: #e6ffed;
+    color: #0b8a3a;
+    border: 1px solid #c7f1d3;
+}
+
+.flash.error {
+    background: #ffecec;
+    color: #a01d1d;
+    border: 1px solid #ffd6d6;
+}
+
+/* Small helper link text */
+.login-link {
+    margin-top: 1rem;
+    color: #6b7280;
+    text-align: center;
+}
+
+.login-link a { color: var(--brand-color); text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 520px) {
+    .register-container { padding: 1.6rem; }
+    .register-section { padding: 1.2rem; }
+}

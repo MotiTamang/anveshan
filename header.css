@@ -1,0 +1,239 @@
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+/* Accessibility helper */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Keep header compact — padding matches original smaller size */
+header {
+    background: var(--bg-header);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Use the original compact navbar padding you preferred */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem; /* original compact padding preserved */
+}
+
+/* Logo area — allow the image to visually scale without changing layout height */
+.logo .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* wrapper keeps layout height small; image inside is scaled visually */
+.logo-img-wrap {
+    height: 45px;            /* original visual baseline height for header */
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;       /* allow scaled image to overflow visually */
+}
+
+/* the image itself uses transform so it appears larger but doesn't push header height */
+.logo-img {
+    height: 45px;            /* layout uses 45px baseline */
+    width: auto;
+    display: block;
+    transform-origin: left center;
+    transform: scale(1.45);  /* visually bigger without increasing header layout height */
+    transition: transform 150ms ease, filter 150ms ease;
+    filter: drop-shadow(0 6px 18px rgba(255,204,0,0.12));
+    will-change: transform;
+}
+
+.logo-img:hover {
+    transform: scale(1.52) translateY(-2px);
+}
+
+/* Brand text (textual logo) — solid color, no gradient, more elegant style */
+.brand-text {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', 'Georgia', serif; /* stylish textual logo font */
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--brand-color);      /* solid yellow */
+    letter-spacing: 0.8px;
+    margin-left: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* subtle depth on black background */
+    white-space: nowrap;
+}
+
+/* nav and links — kept compact and accessible */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #e6eef2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.32rem 0.8rem;
+    border-radius: 6px;
+    transition: background 140ms ease, color 140ms ease, transform 120ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background: rgba(255,204,0,0.06);
+    color: var(--brand-color);
+    transform: translateY(-1px);
+}
+
+/* Search form kept compact */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.01);
+    padding: 6px;
+    border-radius: 999px;
+}
+
+.search-form input[type="text"] {
+    padding: 0.36rem 0.9rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.04);
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.02);
+    color: #f3f6f8;
+    outline: none;
+    min-width: 200px;
+}
+
+.search-form button {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    padding: 0.36rem 0.9rem;
+    cursor: pointer;
+    transition: transform 120ms ease;
+}
+
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: #e6eef2;
+    padding: 0;
+    cursor: pointer;
+    transition: all 140ms ease;
+}
+
+.profile-icon-btn:hover,
+.profile-icon-btn:focus {
+    background: rgba(255,204,0,0.1);
+    border-color: rgba(255,204,0,0.3);
+    color: var(--brand-color);
+}
+
+.profile-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: rgba(0,0,0,0.98);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 200px;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1100;
+}
+
+.profile-dropdown-menu.is-open {
+    display: block;
+}
+
+.profile-dropdown-menu li {
+    margin: 0;
+}
+
+.profile-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #e6eef2;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 140ms ease, color 140ms ease;
+    border-radius: 0;
+}
+
+.profile-dropdown-menu a svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+.profile-dropdown-menu a:hover {
+    background: rgba(255,204,0,0.1);
+    color: var(--brand-color);
+}
+
+.dropdown-divider {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

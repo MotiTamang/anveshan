@@ -1,0 +1,223 @@
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+/* Footer base */
+footer {
+    background: var(--bg-header);
+    color: #f8f8f8;
+    width: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+/* Main container layout */
+.footer-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 520px 1fr;
+    gap: 1rem 2rem;
+    align-items: start;
+    padding: 1.6rem 1.5rem 0.8rem;
+}
+
+/* Brand column */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.footer-logo-img {
+    width: 64px;          /* increased logo size */
+    height: 64px;         /* increased logo size */
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    filter: none;
+}
+
+.footer-logo-text {
+    color: var(--brand-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.footer-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    max-width: 40ch;
+}
+
+/* Contact + Quick Links column (horizontal alignment on wide screens) */
+.footer-contact-quick {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* Wrapper that places contact and quick links side-by-side on wide screens */
+.contact-and-links {
+    display: flex;
+    gap: 2.25rem;
+    align-items: flex-start;
+}
+
+/* Contact area */
+.footer-contact-title,
+.footer-quick-title {
+    margin: 0;
+    color: #f8f8f8;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Contact vertical list */
+.contact-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+}
+
+.contact-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--brand-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.12s;
+}
+
+.contact-line:hover {
+    color: var(--brand-accent);
+    text-decoration: underline;
+}
+
+.icon {
+    display: inline-block;
+    color: var(--brand-color);
+    flex-shrink: 0;
+}
+
+.phone-icon, .mail-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Contact text */
+.contact-text {
+    color: #f8f8f8;
+    font-size: 0.98rem;
+}
+
+/* Quick links nav — now vertical (as requested) even on wide screens */
+.quick-nav {
+    display: flex;
+    flex-direction: column;   /* vertical alignment for About Us and Contact Us */
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+}
+
+.quick-link {
+    color: var(--brand-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.quick-link:hover {
+    color: var(--brand-accent);
+    text-decoration: underline;
+}
+
+/* Spacer (keeps layout balanced on wide screens) */
+.footer-spacer {
+    /* intentionally empty for balance */
+}
+
+/* Footer bottom: horizontal bar across full width */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 1rem;
+    padding: 0.65rem 0;
+    background: transparent;
+}
+
+.footer-bottom-inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center; /* centered horizontally */
+    align-items: center;
+    color: #f8f8f8;
+    font-size: 0.95rem;
+}
+
+/* Accessibility helper: visually hidden */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.1rem;
+    }
+    .footer-bottom-inner {
+        justify-content: center;
+    }
+    .footer-brand {
+        order: 1;
+    }
+    .footer-contact-quick {
+        order: 2;
+    }
+    .footer-spacer {
+        order: 3;
+    }
+
+    /* Stack contact and quick links vertically on smaller screens */
+    .contact-and-links {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    /* quick-nav already vertical so keep behavior */
+}
+
+@media (max-width: 480px) {
+    .footer-logo-img {
+        width: 52px;
+        height: 52px;
+    }
+    .footer-logo-text {
+        font-size: 1.2rem;
+    }
+}

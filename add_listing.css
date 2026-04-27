@@ -1,0 +1,180 @@
+/* Styles for add_listing.php */
+
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+.add-listing-section {
+    background: #f4f6fa;
+    min-height: 80vh;
+    padding: 2.2rem 1rem 3rem;
+}
+
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+    border: 1px solid #e9eef6;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #23272a;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Flash Messages */
+.flash-message {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.flash-message.success {
+    background: #e6ffed;
+    color: #0b8a3a;
+    border: 1px solid #c7f1d3;
+}
+
+.flash-message.error {
+    background: #ffecec;
+    color: #a01d1d;
+    border: 1px solid #ffd6d6;
+}
+
+/* Form Styles */
+.listing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.listing-form label {
+    font-weight: 600;
+    color: #23272a;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.listing-form input[type="text"],
+.listing-form input[type="number"],
+.listing-form input[type="file"],
+.listing-form textarea,
+.listing-form select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #d7e6f7;
+    background: #fbfdff;
+    font-size: 1rem;
+    color: #23272a;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.listing-form input:focus,
+.listing-form textarea:focus,
+.listing-form select:focus {
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.1);
+}
+
+.listing-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.listing-form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23556066' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.5rem;
+}
+
+.help-text {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef3f8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn.save {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    border-color: var(--brand-color);
+}
+
+.btn.save:hover {
+    background: var(--brand-accent);
+    border-color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+.btn.cancel {
+    background: #eef4fb;
+    color: #23272a;
+    border-color: #d6e6fb;
+}
+
+.btn.cancel:hover {
+    background: #e0ecf8;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,102 @@
+:root{
+    --brand-color: #FFCC00;      /* solid yellow for brand text and accents */
+    --brand-accent: #E6B800;
+    --bg-header: #000000;        /* pure black header background */
+    --muted: #cfc9a0;
+    --text-on-brand: #111111;
+    --container-width: 1200px;
+}
+
+.login-section {
+    background: #f4f6fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #fff;
+    padding: 2.7rem 2rem 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 32px rgba(255, 204, 0, 0.09);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #eaf1fb;
+}
+
+.login-container h2 {
+    color: #23272a;
+    font-size: 1.6rem;
+    margin-bottom: 1.7rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+}
+
+.login-form label {
+    text-align: left;
+    color: var(--brand-color);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #cfd8dc;
+    font-size: 1rem;
+    background: #f9fbfd;
+    color: #23272a;
+    outline: none;
+    transition: border 0.14s;
+}
+
+.login-form input:focus {
+    border-color: var(--brand-color);
+}
+
+.login-form button {
+    background: var(--brand-color);
+    color: var(--text-on-brand);
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    padding: 0.52rem 0.8rem;
+    cursor: pointer;
+    font-size: 1.09rem;
+    margin-top: 0.7rem;
+    transition: background 0.17s;
+}
+
+.login-form button:hover {
+    background: var(--brand-accent);
+}
+
+.register-link {
+    margin-top: 1.4rem;
+    color: #888;
+    font-size: 0.98rem;
+}
+
+.register-link a {
+    color: var(--brand-color);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+
+.register-link a:hover {
+    color: var(--brand-accent);
+}
+
+@media (max-width: 650px) {
+    .login-container {
+        padding: 1.4rem 0.6rem 1rem 0.6rem;
+    }
+}
